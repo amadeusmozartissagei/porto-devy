@@ -10,12 +10,12 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="#home" aria-label="AprilWeb.Art home">AprilWeb.Art</a>
-      <nav class="main-nav" aria-label="Navigasi utama">
+      <nav class="main-nav" id="primary-nav" aria-label="Navigasi utama">
         <a href="#home">Home</a>
         <a href="about.html">About Me</a>
-        <a href="#contact">Contact</a>
+        <a href="contact.html">Contact</a>
       </nav>
-      <button class="menu-button" type="button" aria-label="Buka menu">
+      <button class="menu-button" type="button" aria-label="Buka menu" aria-controls="primary-nav" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -40,9 +40,9 @@
 
     <section class="portfolio" id="portfolio">
       <img class="ornament ornament-loop" src="assets/poster-loop.svg" alt="" aria-hidden="true">
-      <img class="ornament ornament-right" src="assets/ornament-bouquet.png" alt="" aria-hidden="true">
-      <img class="ornament ornament-left" src="assets/ornament-bouquet.png" alt="" aria-hidden="true">
-      <img class="ornament ornament-tall" src="assets/ornament-bouquet.png" alt="" aria-hidden="true">
+      <img class="ornament ornament-right" src="assets/ornament-bouquet.svg" alt="" aria-hidden="true">
+      <img class="ornament ornament-left" src="assets/ornament-bouquet.svg" alt="" aria-hidden="true">
+      <img class="ornament ornament-tall" src="assets/ornament-bouquet.svg" alt="" aria-hidden="true">
 
       <div class="content-wrap">
         <section class="work-group poster-group" aria-labelledby="poster-title">
@@ -152,5 +152,6 @@
     <p>AprilWeb.Art</p>
     <p>Portfolio desain poster, fotografi produk, dan redesain cover buku.</p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>

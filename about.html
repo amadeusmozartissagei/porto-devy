@@ -13,12 +13,12 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html#home" aria-label="AprilWeb.Art home">AprilWeb.Art</a>
-      <nav class="main-nav" aria-label="Navigasi utama">
+      <nav class="main-nav" id="primary-nav" aria-label="Navigasi utama">
         <a href="index.html#home">Home</a>
         <a href="about.html" aria-current="page">About Me</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="contact.html">Contact</a>
       </nav>
-      <button class="menu-button" type="button" aria-label="Buka menu">
+      <button class="menu-button" type="button" aria-label="Buka menu" aria-controls="primary-nav" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -48,7 +48,7 @@
           <p>Saya Devy Aprilia, mahasiswi universitas negeri semarang adalah seseorang yang menyukai dunia kreatif, terutama dalam desain dan ilustrasi. Bagi saya, setiap karya adalah cara untuk bercerita dan menyampaikan ide dengan cara yang unik. Saya senang mengeksplorasi gaya baru dan terus berkembang melalui setiap proyek yang saya kerjakan.</p>
         </div>
         <figure class="about-photo-card">
-          <img src="assets/about-halo-photo.png" alt="Foto Devy Aprilia berdiri di depan latar biru dan oranye.">
+          <img src="assets/about-halo-photo-new.png" alt="Foto Devy Aprilia berdiri di depan latar biru dan oranye.">
         </figure>
       </div>
     </section>
@@ -76,17 +76,24 @@
           <p>Dalam prosesnya, saya menggunakan beberapa tools seperti figma, adobe illustrator, ibis paint, adobe animate, dan beberapa aplikasi desain lainya.</p>
         </div>
         <ul class="tool-icons" aria-label="Tools desain">
-          <li class="tool-icon figma-icon" aria-label="Figma">
-            <span></span><span></span><span></span><span></span><span></span>
+          <li class="tool-icon tool-icon-figma" aria-label="Figma">
+            <img src="assets/tool-figma.svg" alt="">
           </li>
-          <li class="tool-icon ai-icon" aria-label="Adobe Illustrator">Ai</li>
-          <li class="tool-icon ibis-icon" aria-label="Ibis Paint">ip</li>
-          <li class="tool-icon an-icon" aria-label="Adobe Animate">An</li>
+          <li class="tool-icon tool-icon-illustrator" aria-label="Adobe Illustrator">
+            <img src="assets/tool-illustrator.svg" alt="">
+          </li>
+          <li class="tool-icon tool-icon-ibis" aria-label="Ibis Paint">
+            <img src="assets/tool-ibis.svg" alt="">
+          </li>
+          <li class="tool-icon tool-icon-animate" aria-label="Adobe Animate">
+            <img src="assets/tool-animate.svg" alt="">
+          </li>
         </ul>
       </div>
     </section>
 
     <div class="about-end-band" aria-hidden="true"></div>
   </main>
+  <script src="script.js"></script>
 </body>
 </html>
