@@ -22,6 +22,22 @@ body {
   background: var(--teal);
   color: var(--white);
   font-family: "Trebuchet MS", Arial, sans-serif;
+  opacity: 0;
+  animation: pageIn 380ms ease forwards;
+}
+
+body.page-leaving {
+  animation: pageOut 280ms ease forwards;
+}
+
+@keyframes pageIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pageOut {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(-10px); }
 }
 
 img {
@@ -805,29 +821,11 @@ a {
 }
 
 .about-page {
-  --header-height: 96px;
   background: var(--cream);
   color: var(--teal);
 }
 
-.about-page .brand {
-  font-size: clamp(36px, 4vw, 48px);
-}
 
-.about-page .main-nav {
-  gap: clamp(42px, 6vw, 82px);
-  font-size: clamp(1.1rem, 1.8vw, 1.55rem);
-}
-
-.about-page .menu-button {
-  width: 52px;
-  height: 44px;
-}
-
-.about-page .menu-button span {
-  height: 6px;
-  margin: 7px 0;
-}
 
 .about-main {
   background: var(--cream);
@@ -1120,26 +1118,8 @@ a {
 }
 
 .contact-page {
-  --header-height: 78px;
   background: var(--cream);
   color: var(--teal);
-}
-
-.contact-page .site-header {
-  box-shadow: none;
-}
-
-.contact-page .header-inner {
-  width: min(1200px, calc(100% - 120px));
-}
-
-.contact-page .brand {
-  font-size: clamp(1.8rem, 2.6vw, 2.6rem);
-}
-
-.contact-page .main-nav {
-  gap: clamp(36px, 4vw, 64px);
-  font-size: clamp(1.05rem, 1.4vw, 1.35rem);
 }
 
 .contact-main {
@@ -1236,14 +1216,7 @@ a {
 }
 
 @media (max-width: 1100px) {
-  .about-page {
-    --header-height: 124px;
-  }
 
-  .about-page .main-nav {
-    gap: 54px;
-    font-size: 1.58rem;
-  }
 
   .about-hero {
     min-height: min(1220px, calc(100vw * 1.22));
@@ -1409,22 +1382,7 @@ a {
     border-radius: 14px;
   }
 
-  .contact-page {
-    --header-height: 76px;
-  }
 
-  .contact-page .header-inner {
-    width: calc(100% - 80px);
-  }
-
-  .contact-page .brand {
-    font-size: 1.8rem;
-  }
-
-  .contact-page .main-nav {
-    gap: 40px;
-    font-size: 1.15rem;
-  }
 
   .contact-section {
     min-height: calc(100vh - var(--header-height));
@@ -1510,23 +1468,7 @@ a {
 }
 
 @media (max-width: 700px) {
-  .about-page {
-    --header-height: 89px;
-  }
 
-  .about-page .brand {
-    font-size: 36px;
-  }
-
-  .about-page .menu-button {
-    width: 44px;
-    height: 44px;
-  }
-
-  .about-page .menu-button span {
-    height: 4px;
-    margin: 7px 0;
-  }
 
   .about-hero {
     min-height: calc(100vh - var(--header-height));
@@ -1689,27 +1631,7 @@ a {
     height: 72px;
   }
 
-  .contact-page {
-    --header-height: 89px;
-  }
 
-  .contact-page .header-inner {
-    width: calc(100% - 54px);
-  }
-
-  .contact-page .brand {
-    font-size: 32px;
-  }
-
-  .contact-page .menu-button {
-    width: 44px;
-    height: 44px;
-  }
-
-  .contact-page .menu-button span {
-    height: 4px;
-    margin: 7px 0;
-  }
 
   .site-header.nav-open .main-nav {
     padding: 12px 27px 18px;
