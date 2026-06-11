@@ -830,9 +830,11 @@ a {
 
 .about-title-bg {
   position: absolute;
-  z-index: auto;
-  inset: 112px 0 auto;
-  display: block;
+  z-index: 1;
+  inset: clamp(140px, 11vw, 170px) 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: clamp(0.75rem, 2vw, 2rem);
   font-family: "Anton", Impact, "Arial Black", sans-serif;
   font-style: normal;
   font-size: clamp(12rem, 22vw, 22rem);
@@ -845,16 +847,11 @@ a {
 }
 
 .about-title-bg span {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  z-index: 1;
-  transform: translateX(-50%);
+  position: static;
+  transform: none;
 }
 
 .about-title-bg span + span {
-  top: clamp(255px, 25vw, 350px);
-  z-index: 3;
   margin: 0;
 }
 
@@ -1182,7 +1179,7 @@ a {
 
   .about-title-bg {
     z-index: auto;
-    inset: 122px 0 0;
+    inset: clamp(150px, 16vw, 190px) 0 0;
     display: block;
     font-size: clamp(13rem, 34vw, 22rem);
     line-height: 0.74;
@@ -1385,7 +1382,7 @@ a {
 
   .about-title-bg {
     z-index: auto;
-    inset: 145px 0 auto;
+    inset: 152px 0 auto;
     font-size: clamp(9.9rem, 41.5vw, 10.3rem);
     line-height: 0.74;
     letter-spacing: 0;
@@ -1400,7 +1397,7 @@ a {
   }
 
   .about-title-bg span + span {
-    top: 278px;
+    top: 285px;
     left: 50%;
     z-index: 3;
     margin: 0;
